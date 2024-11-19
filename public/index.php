@@ -12,6 +12,7 @@ include "../src/controllers/ctrladdsong.php";
 include "../src/controllers/ctrlsongslist.php";
 include "../src/controllers/ctrleditformsong.php";
 include "../src/controllers/ctrlupdatesong.php";
+include "../src/controllers/ctrlsong.php";
 
 /**
  * Carreguem les classes del Framework Emeset
@@ -42,7 +43,9 @@ if (isset($_REQUEST["r"])) {
 /* Front Controller, aquí es decideix quina acció s'executa */
 if ($r == "") {
   $response = ctrlIndex($request, $response, $container);
-} elseif($r == "updatesong"){
+} elseif($r == "song"){
+  $response = ctrlsong($request, $response, $container);
+}elseif($r == "updatesong"){
   $response = ctrlupdatesong($request, $response, $container);
 }elseif($r == "editsong"){
   $response = ctrleditformsong($request, $response, $container);

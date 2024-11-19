@@ -19,7 +19,7 @@
     <div>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Fixed navbar</a>
+                <a class="navbar-brand" href="#">Examen 1</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -78,12 +78,13 @@
                                     </div>
                                 </td>
                                 <td>
+                                    <!-- Botón para abrir la canción -->
+                                    <button class="btn btn-success m-1">
+                                        <a class="text-reset" style="text-decoration: none;" href="index.php?r=song&id=<?= $song['id_song'] ?>">Ver</a>
+                                    </button>
                                     <!-- Botón para abrir el modal de edición -->
                                     <button class="btn btn-warning m-1" data-bs-toggle="modal" data-bs-target="#editSongModal-<?= $song['id_song'] ?>">
                                         Editar
-                                    </button>
-                                    <button class="btn btn-danger m-1">
-                                        <a class="text-reset" style="text-decoration: none;" href="index.php?r=deletesong&id=<?= $song['id_song'] ?>">Eliminar</a>
                                     </button>
                                 </td>
                             </tr>
